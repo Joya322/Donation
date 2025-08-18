@@ -3,3 +3,7 @@
   margin: 0px;
   padding: 0px;
 }
+.containe {
+  max-width: 1300px;
+  margin: auto;
+}
