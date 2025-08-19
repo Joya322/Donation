@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- css style -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- nav start -->
+
+    <nav
+      class="sticky top-0 bg-white bg-opacity-90 backdrop-filter backdrop-blur-sm z-50"
+    >
+      <div class="navTop bg-amber-50 bg-opacity-50 py-6">
+        <div class="containe">
+          <ul
+            class="flex justify-between items-center font-medium text-black flex-wrap gap-5 md:gap-0"
+          >
+            <li>
+              <button id="homeBtn" class="bg-green-400 px-7 py-3 rounded-lg">
+                Home
+              </button>
+            </li>
+            <li
+              class="flex justify-center items-center gap-4 order-first md:order-none w-full md:w-auto"
+            >
+              <img class="icon" src="./assets/images/logo.png" alt="logo" />
+
+              <h3 class="iconTitle text-2xl">Donate Bangladesh</h3>
+            </li>
+            <li class="flex justify-center items-center gap-3">
+              <img
+                src="./assets/images/coin.png"
+                alt="Coin Icon"
+                class="balanceIcon"
+              />
+              <p class="opacity-70">
+                <span class="balanceAmount">600</span> BDT
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- nav end -->
+
+    <main class="containe my-6">
+      <h1 class="text-3xl font-bold">Important FAQ</h1>
+      <div class="cards pt-5 flex flex-col justify-center gap-6">
+        <div
+          class="card border-2 rounded-lg flex flex-col justify-center gap-5 px-8 py-3"
+        >
+          <h3 class="font-semibold text-xl text-justify">
+            What is the Document Object Model (DOM)?
+          </h3>
+          <p class="font-extralight text-justify">
+            The Document Object Model (DOM) is a programming interface for web
+            documents, specifically HTML and XML. It represents the structure of
+            a document as a logical tree, where each element, attribute, and
+            text content within the document is represented as a "node."
+          </p>
+        </div>
+        <div
+          class="card border-2 rounded-lg flex flex-col justify-center gap-5 px-8 py-3"
+        >
+          <h3 class="font-semibold text-xl text-justify">
+            How do you select an element from the DOM?
+          </h3>
+          <div class="text-justify font-extralight">
+            <p class="mb-3">
+              Selecting an element from the Document Object Model (DOM) in
+              JavaScript involves using various methods provided by the document
+              object. These methods allow you to target elements based on their
+              unique identifiers, classes, tag names, or CSS selectors.
+            </p>
+            <h3 class="font-medium mb-3">
+              Here are the primary methods for selecting DOM elements:
+            </h3>
+            <ol class="list-decimal list-inside marker:font-medium">
+              <li>
+                <span class="font-medium">document.getElementById(): </span>This
+                method selects a single element based on its unique id
+                attribute.
+              </li>
+              <li>
+                <span class="font-medium"
+                  >document.getElementsByClassName(): </span
+                >This method returns a live HTMLCollection of all elements that
+                have the specified class name(s).
+              </li>
+              <li>
+                <span class="font-medium"
+                  >document.getElementsByTagName(): </span
+                >This method returns a live HTMLCollection of all elements with
+                the specified tag name.
+              </li>
+              <li>
+                <span class="font-medium">document.querySelector(): </span>This
+                method returns the first element within the document that
+                matches the specified CSS selector(s).
+              </li>
+              <li>
+                <span class="font-medium">document.querySelectorAll(): </span
+                >This method returns a static NodeList of all elements within
+                the document that match the specified CSS selector(s).
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div
+          class="card border-2 rounded-lg flex flex-col justify-center gap-5 px-8 py-3"
+        >
+          <h3 class="font-semibold text-xl text-justify">
+            What is event delegation in the context of the DOM, and why is it
+            useful?
+          </h3>
+          <p class="font-extralight text-justify">
+            Event delegation is a JavaScript technique where a single event
+            listener on a parent element handles events for all its child
+            elements, rather than attaching listeners to each individual child.
+            <br />
+            It's useful for its efficiency, particularly with dynamic content
+            that is added to the page after it loads. By leveraging event
+            bubbling and the event.target property, the parent listener can
+            identify which child element triggered the event, reducing the
+            number of listeners and improving performance.
+          </p>
+        </div>
+        <div
+          class="card border-2 rounded-lg flex flex-col justify-center gap-5 px-8 py-3"
+        >
+          <h3 class="font-semibold text-xl text-justify">
+            How do you manipulate an element's attributes using the DOM?
+          </h3>
+          <div class="text-justify font-extralight">
+            <p class="mb-3">
+              Manipulating an element's attributes using the DOM in JavaScript
+              involves several methods available on Element objects.
+            </p>
+            <ol class="list-decimal list-inside marker:font-medium">
+              <li>
+                <span class="font-medium">Getting an attribute's value:</span>
+                Use the getAttribute(attributeName) method to retrieve the value
+                of a specific attribute.
+              </li>
+              <li>
+                <span class="font-medium"
+                  >Setting or updating an attribute's value:</span
+                >
+                Use the setAttribute(attributeName, value) method. If the
+                attribute already exists, its value is updated; otherwise, a new
+                attribute is added.
+              </li>
+              <li>
+                <span class="font-medium">Removing an attribute:</span> Use the
+                removeAttribute(attributeName) method to remove a specified
+                attribute from an element.
+              </li>
+              <li>
+                <span class="font-medium"
+                  >Checking for an attribute's existence:</span
+                >
+                Use the hasAttribute(attributeName) method, which returns true
+                if the element has the specified attribute, and false otherwise.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- History tab end -->
+    </main>
+
+    <!-- JS files -->
+    <script src="./assets/js/commonFunc.js"></script>
+    <script src="./assets/js/blogHomeToggler.js"></script>
+  </body>
+</html>
