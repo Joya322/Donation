@@ -2,8 +2,11 @@
   font-family: "Lexend", sans-serif;
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 .containe {
   max-width: 1300px;
+  padding-right: 32px;
+  padding-left: 32px;
   margin: auto;
 }
