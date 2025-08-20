@@ -29,7 +29,9 @@
             class="flex justify-between items-center font-medium text-black flex-wrap gap-5 md:gap-0"
           >
             <li>
-              <button id="blogBtn" class="bg-green-400 px-7 py-3 rounded-lg">Blog</button>
+              <button id="blogBtn" class="bg-green-400 px-7 py-3 rounded-lg">
+                Blog
+              </button>
             </li>
             <li
               class="flex justify-center items-center gap-4 order-first md:order-none w-full md:w-auto"
@@ -44,17 +46,23 @@
                 alt="Coin Icon"
                 class="balanceIcon"
               />
-              <p class="opacity-70">
-                <span class="balanceAmount">600</span> BDT
-              </p>
+              <p class="opacity-70"><span id="balanceAmount">5500</span> BDT</p>
             </li>
           </ul>
         </div>
       </div>
       <div class="navBottom pt-9 pb-6">
         <div class="containe flex justify-center items-center gap-5">
-          <button class="bg-green-400 px-9 py-4 rounded-lg">Donation</button>
-          <button class="bg-gray-100 border-2 px-9 py-4 rounded-lg opacity-70">
+          <button
+            id="donationBtn"
+            class="bg-green-400 px-9 py-4 rounded-lg border-2"
+          >
+            Donation
+          </button>
+          <button
+            id="historyBtn"
+            class="bg-gray-100 border-2 px-9 py-4 rounded-lg opacity-70"
+          >
             History
           </button>
         </div>
@@ -79,7 +87,10 @@
             >
               <img src="./assets/images/coin.png" alt="Coin Image" />
               <p class="opacity-70">
-                <span class="donateAmountNoakhali">0</span> BDT
+                <span id="balanceAmountForNoakhali" class="donationBalance"
+                  >0</span
+                >
+                BDT
               </p>
             </div>
             <h3 class="cardTitle font-semibold text-2xl">
@@ -94,11 +105,14 @@
               lives of those in need.
             </p>
             <input
-              class="border-2 rounded-lg px-5 py-4 w-full mt-3"
+              id="donationAmountForNoakhali"
+              class="donationInput border-2 rounded-lg px-5 py-4 w-full mt-3"
               type="text"
               placeholder="Write Donation Amount"
             />
             <button
+              data-target="Noakhali"
+              ;
               class="donateBtn bg-green-400 w-full py-4 px-5 rounded-lg mt-2"
             >
               Donate Now
@@ -117,7 +131,10 @@
             >
               <img src="./assets/images/coin.png" alt="Coin Image" />
               <p class="opacity-70">
-                <span class="donateAmountFeni">600</span> BDT
+                <span id="balanceAmountForFeni" class="donationBalance"
+                  >600</span
+                >
+                BDT
               </p>
             </div>
             <h3 class="cardTitle font-semibold text-2xl">
@@ -134,11 +151,14 @@
               urgent need.
             </p>
             <input
-              class="border-2 rounded-lg px-5 py-4 w-full mt-3"
+              id="donationAmountForFeni"
+              class="donationInput border-2 rounded-lg px-5 py-4 w-full mt-3"
               type="text"
               placeholder="Write Donation Amount"
             />
             <button
+              data-target="Feni"
+              ;
               class="donateBtn bg-green-400 w-full py-4 px-5 rounded-lg mt-2"
             >
               Donate Now
@@ -160,7 +180,10 @@
             >
               <img src="./assets/images/coin.png" alt="Coin Image" />
               <p class="donateAmount opacity-70">
-                <span class="donateAmountMovement">2400</span> BDT
+                <span id="balanceAmountForMovement" class="donationBalance"
+                  >2400</span
+                >
+                BDT
               </p>
             </div>
             <h3 class="cardTitle font-semibold text-2xl">
@@ -178,11 +201,14 @@
               their time of need.
             </p>
             <input
-              class="border-2 rounded-lg px-5 py-4 w-full mt-3"
+              id="donationAmountForMovement"
+              class="donationInput border-2 rounded-lg px-5 py-4 w-full mt-3"
               type="text"
               placeholder="Write Donation Amount"
             />
             <button
+              data-target="Quota Movement"
+              ;
               class="donateBtn bg-green-400 w-full py-4 px-5 rounded-lg mt-2"
             >
               Donate Now
@@ -192,23 +218,34 @@
       </div>
       <!-- donation tab end -->
       <!-- History tab start -->
-      <div id="historyTab" class="pt-5 flex flex-col justify-center gap-6">
-        <div
-          class="cards border-2 rounded-lg flex flex-col justify-center gap-5 px-8 py-3"
+      <div
+        id="historyTab"
+        class="historyCards hidden pt-5 flex flex-col justify-center gap-6"
+      >
+        <!-- <div
+          class="historyCard border-2 rounded-lg flex flex-col justify-center gap-5 px-8 py-3"
         >
-          <h3 class="font-semibold text-xl text-justify">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h3>
+          <h3 class="donationHistoryTitle font-semibold text-xl text-justify">
+            96500 Taka is Donated for famine-2024 at Feni, Bangladesh
+          </h3>
+          <p class="font-extralight opacity-70 text-justify">
+            Date :
+            <span class="donationHistoryTime"
+              >Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard
+              Time)</span
+            >
+          </p>
+        </div> -->
+        <!-- <div
+          class="historyCard border-2 rounded-lg flex flex-col justify-center gap-5 px-8 py-3"
+        >
+          <h3 class="font-semibold text-xl text-justify">
+            96500 Taka is Donated for famine-2024 at Feni, Bangladesh
+          </h3>
           <p class="font-extralight opacity-70 text-justify">
             Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
           </p>
-        </div>
-        <div
-          class="cards border-2 rounded-lg flex flex-col justify-center gap-5 px-8 py-3"
-        >
-          <h3 class="font-semibold text-xl text-justify">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h3>
-          <p class="font-extralight opacity-70 text-justify">
-            Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
-          </p>
-        </div>
+        </div> -->
       </div>
       <!-- History tab end -->
     </main>
@@ -218,8 +255,10 @@
     <footer></footer>
     <!-- footer end -->
 
-     <!-- JS files -->
-      <script src="./assets/js/commonFunc.js"></script>
-      <script src="./assets/js/blogHomeToggler.js"></script>
+    <!-- JS files -->
+    <script src="./assets/js/commonFunc.js"></script>
+    <script src="./assets/js/blogHomeToggler.js"></script>
+    <script src="./assets/js/donationHistoryToggler.js"></script>
+    <script src="./assets/js/donationCalculation.js"></script>
   </body>
 </html>
